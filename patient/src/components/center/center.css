@@ -1,0 +1,7 @@
+.center {
+    width: 30%;
+    background-color: var(--light-bg);
+    aspect-ratio: 2/1;
+    border-radius: 1rem;
+    padding: 1rem;
+}

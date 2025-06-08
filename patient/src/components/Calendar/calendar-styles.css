@@ -1,0 +1,755 @@
+.doctor-calendar-container .fc-event-title-container {
+    text-align: center;
+    padding: 7px 0 !important;
+    border-radius: 1rem !important;
+}
+
+.doctor-calendar-container {
+  width: 100%;
+  margin: 0;
+  max-width: none !important;
+  margin-top: 1rem !important;
+}
+
+.doctor-calendar-container .fc-event-main-frame {
+    border-radius: 1rem;
+}
+
+.doctor-calendar-container .fc .fc-daygrid-event-harness-abs {
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 9px;
+    overflow: hidden;
+    margin: 0 1rem;
+}
+
+/* doctor-calendar-styles.css */
+
+/* Main container styles */
+.doctor-calendar-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Calendar header */
+   .calendar-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .calendar-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 4px;
+  }
+  
+  .calendar-subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 0;
+  }
+  
+  /* FullCalendar custom styles */
+  .doctor-calendar {
+    margin-bottom: 24px;
+  }
+  
+  /* FullCalendar specific overrides */
+  .fc .fc-toolbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px !important;
+  }
+  
+  .fc .fc-toolbar-title {
+    font-size: 18px !important;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  /* Button styles */
+  .fc .fc-button {
+    background-color: #f0f9ff !important;
+    border: 1px solid #bae6fd !important;
+    color: #0369a1 !important;
+    font-weight: 500 !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    transition: all 0.2s ease !important;
+    text-transform: capitalize !important;
+  }
+  
+  .fc .fc-button:hover {
+    background-color: #e0f2fe !important;
+    border-color: #7dd3fc !important;
+  }
+  
+   .fc .fc-button-primary:not(:disabled).fc-button-active,
+  .fc .fc-button-primary:not(:disabled):active {
+    background-color: #0369a1 !important;
+    border-color: #0284c7 !important;
+    color: #ffffff !important;
+  }
+
+
+  .fc .fc-button-primary{
+    background: var(--primary);
+    color: white;
+    outline: none;
+    border: none;
+  }
+  
+  /* Today button */
+   .fc .fc-button-primary.fc-today-button {
+    background-color: #0369a1 !important;
+    border-color: #0284c7 !important;
+    color: #ffffff !important;
+  }
+  
+  .fc .fc-button-primary.fc-today-button:hover {
+    background-color: #0284c7 !important;
+    border-color: #0284c7 !important;
+  }
+  
+  /* Calendar headers (days of week) */
+  .fc .fc-col-header-cell {
+    background-color: #f0f9ff;
+    padding: 12px 0 !important;
+  }
+  
+  .fc .fc-col-header-cell-cushion {
+    color: #0c4a6e;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none !important;
+    padding: 8px 4px !important;
+  }
+  
+  /* Day cells */
+  .fc .fc-daygrid-day {
+    transition: background-color 0.2s ease;
+  }
+  
+  .fc .fc-daygrid-day.fc-day-today {
+    background-color: #f0f9ff !important;
+  }
+  
+  /* Saturday styling - showing as non-working day */
+  .fc .fc-day-sat {
+    background-color: #f9fafb !important;
+  }
+  
+  .fc .fc-timegrid-col.fc-day-sat {
+    background-color: #f1f5f9 !important;
+  }
+  
+  /* Business hours highlight */
+  .fc .fc-timegrid-col.fc-day-sat .fc-timegrid-col-frame {
+    background-color: #f1f5f9 !important;
+  }
+  
+  .fc .fc-non-business {
+    background: repeating-linear-gradient(
+      45deg,
+      #f9fafb,
+      #f9fafb 10px,
+      #f1f5f9 10px,
+      #f1f5f9 20px
+    ) !important;
+  }
+  
+  /* Event styles */
+  .fc-event {
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 4px !important;
+    font-size: 13px !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+  
+  .event-content {
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .event-title {
+    font-weight: 600;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .event-time {
+    font-size: 11px;
+    opacity: 0.9;
+  }
+  
+  .event-status {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  
+  /* Status-specific styling */
+  .status-confirmed {
+    border-left: 3px solid #4f46e5 !important;
+  }
+  
+  .status-completed {
+    border-left: 3px solid #10b981 !important;
+  }
+  
+  .status-canceled {
+    border-left: 3px solid #ef4444 !important;
+    opacity: 0.75;
+    text-decoration: line-through;
+  }
+  
+  /* Appointment Modal */
+  .appointment-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    padding: 24px;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .modal-header h3 {
+    margin: 0;
+    color: #0c4a6e;
+    font-size: 18px;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #64748b;
+  }
+  
+  .appointment-time {
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: #f0f9ff;
+    border-radius: 6px;
+    color: #0369a1;
+    font-size: 14px;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #334155;
+    font-size: 14px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  
+  .save-button {
+    background-color: #0369a1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .save-button:hover {
+    background-color: #0284c7;
+  }
+  
+  .delete-button {
+    background-color: #fee2e2;
+    color: #ef4444;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #fecaca;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .fc .fc-toolbar {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .fc .fc-toolbar-title {
+      margin-bottom: 12px;
+    }
+    
+
+    
+    .modal-content {
+      width: 95%;
+      padding: 16px;
+    }
+  }
+
+  .own-appointment {
+    background-color: orange !important;
+    border-left: 3px solid orangered !important;
+  }
+  
+  /* Better now indicator */
+  .fc .fc-timegrid-now-indicator-line {
+    border-color: #0ea5e9;
+    border-width: 2px;
+  }
+  
+  .fc .fc-timegrid-now-indicator-arrow {
+    border-color: #0ea5e9;
+    border-width: 5px;
+  }
+  
+  /* Time slots styling */
+  .fc .fc-timegrid-slot {
+    height: 48px !important;
+    border-bottom: 1px dashed #e2e8f0;
+  }
+  
+  /* Improve time labels */
+  .fc .fc-timegrid-axis-cushion {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 500;
+    width: 60px !important; 
+  }
+
+  /* Calendar container styles */
+.doctor-calendar-container {
+  font-family: 'Inter', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.calendar-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.calendar-header h2 {
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.calendar-subtitle {
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.patient-instructions {
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.doctor-calendar {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Loading and error states */
+.loading-container, .error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.error-container {
+  color: #ef4444;
+}
+
+/* Event styles */
+.appointment-event {
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.event-content {
+  padding: 4px;
+  line-height: 1.2;
+}
+
+.event-title {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-time {
+  font-size: 0.8em;
+}
+
+.event-status {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.own-appointment-indicator {
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+/* Status colors */
+.status-confirmed {
+  background-color: rgba(79, 70, 229, 0.1);
+  border-left: 3px solid #4f46e5;
+}
+
+.status-completed {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-left: 3px solid #10b981;
+}
+
+.status-cancelled {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-left: 3px solid #ef4444;
+}
+
+.status-ongoing {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-left: 3px solid #3b82f6;
+}
+
+.status-missed {
+  background-color: rgba(107, 114, 128, 0.1);
+  border-left: 3px solid #6b7280;
+}
+
+.status-requested {
+  background-color: rgba(249, 115, 22, 0.1);
+  border-left: 3px solid #f97316;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+/* Modal content */
+.modal-content {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.modal-header {
+  background-color: #f3f4f6;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #1f2937;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0 5px;
+  line-height: 1;
+}
+
+.close-button:hover {
+  color: #1f2937;
+}
+
+.appointment-time {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4b5563;
+}
+
+.appointment-details {
+  padding: 20px;
+}
+
+.detail-item {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  padding: 0 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.form-actions {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.save-button, .primary-button {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+}
+
+.cancel-button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+}
+
+.secondary-button {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  border: 1px solid #d1d5db;
+}
+
+.modal-footer {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.status-badge.confirmed {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+.status-badge.completed {
+  background-color: #d1fae5;
+  color: #10b981;
+}
+
+.status-badge.cancelled {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+.status-badge.ongoing {
+  background-color: #dbeafe;
+  color: #3b82f6;
+}
+
+.status-badge.missed {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.status-badge.requested {
+  background-color: #ffedd5;
+  color: #f97316;
+}
+
+.modal-note {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Alert styles */
+.alert-modal {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  z-index: 1100;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.alert-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.alert-content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.alert-info {
+  background-color: #dbeafe;
+  border-left: 4px solid #3b82f6;
+  color: #1e40af;
+}
+
+.alert-success {
+  background-color: #d1fae5;
+  border-left: 4px solid #10b981;
+  color: #065f46;
+}
+
+.alert-warning {
+  background-color: #ffedd5;
+  border-left: 4px solid #f97316;
+  color: #c2410c;
+}
+
+.alert-error {
+  background-color: #fee2e2;
+  border-left: 4px solid #ef4444;
+  color: #b91c1c;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .doctor-calendar-container {
+    padding: 10px;
+  }
+  
+  .modal-content {
+    width: 90%;
+  }
+  
+  .alert-modal {
+    width: 90%;
+    right: 5%;
+    left: 5%;
+  }
+}
+
+.fc-list-event {
+  background-color: unset !important;
+}

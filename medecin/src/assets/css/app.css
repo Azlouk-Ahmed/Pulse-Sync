@@ -1,0 +1,163 @@
+/*
+ |--------------------------------------------------------------------------
+ | TailwindCSS Directives
+ |--------------------------------------------------------------------------
+ |
+ | Import TailwindCSS directives and swipe out at build-time with all of
+ | the styles it generates based on your configured design system.
+ |
+ | Please check this link for more details:
+ | https://tailwindcss.com/docs/installation#include-tailwind-in-your-css
+ |
+ */
+@import "./_tailwind.css";
+
+/*
+   |--------------------------------------------------------------------------
+   | Fonts
+   |--------------------------------------------------------------------------
+   |
+   | Import all fonts used in the template, the font configuration can be
+   | seen in "tailwind.config.js".
+   |
+   | Please check this link for more details:
+   | https://tailwindcss.com/docs/theme
+   |
+   */
+@import "./_roboto.css";
+
+/*
+   |--------------------------------------------------------------------------
+   | 3rd Party Libraries
+   |--------------------------------------------------------------------------
+   |
+   | Import 3rd party library CSS files.
+   |
+   */
+@import "simplebar/src/simplebar.css";
+@import "dropzone/dist/dropzone.css";
+@import "tabulator-tables/dist/css/tabulator.css";
+@import "tom-select/dist/css/tom-select.css";
+@import "zoom-vanilla.js/dist/zoom.css";
+@import "toastify-js/src/toastify.css";
+@import "highlight.js/styles/github.css";
+@import "tippy.js/dist/tippy.css";
+@import "tippy.js/themes/light.css";
+@import "tippy.js/dist/svg-arrow.css";
+@import "tippy.js/animations/shift-away.css";
+@import "tiny-slider/dist/tiny-slider.css";
+@import "leaflet/dist/leaflet.css";
+@import "leaflet.markercluster/dist/MarkerCluster.css";
+
+/*
+   |--------------------------------------------------------------------------
+   | Components
+   |--------------------------------------------------------------------------
+   |
+   | Import CSS components.
+   |
+   */
+@import "./components/_global.css";
+@import "./components/_intro.css";
+@import "./components/_zoom-in.css";
+@import "./components/_image-fit.css";
+@import "./components/_typing-dots.css";
+@import "./components/_scrollbar-hidden.css";
+@import "./components/_box.css";
+@import "./components/_tiny-slider.css";
+@import "./components/_tippy.css";
+@import "./components/_toastify.css";
+@import "./components/_zoom-vanilla.css";
+@import "./components/_tom-select.css";
+@import "./components/_ckeditor.css";
+@import "./components/_litepicker.css";
+@import "./components/_full-calendar.css";
+@import "./components/_tabulator.css";
+
+
+
+.scrollbar-hide {
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;     /* Firefox */
+ }
+ 
+ .scrollbar-hide ::-webkit-scrollbar {
+   display: none;             /* Chrome, Safari */
+ }
+ .text-36-bold {
+    @apply text-[36px] leading-[40px] font-bold;
+  }
+
+  .text-24-bold {
+    @apply text-[24px] leading-[28px] font-bold;
+  }
+
+  .text-32-bold {
+    @apply text-[32px] leading-[36px] font-bold;
+  }
+
+  .text-18-bold {
+    @apply text-[18px] leading-[24px] font-bold;
+  }
+
+  .text-16-semibold {
+    @apply text-[16px] leading-[20px] font-semibold;
+  }
+
+  .text-16-regular {
+    @apply text-[16px] leading-[20px] font-normal;
+  }
+
+  .text-14-medium {
+    @apply text-[14px] leading-[18px] font-medium;
+  }
+
+  .text-14-regular {
+    @apply text-[14px] leading-[18px] font-normal;
+  }
+
+  .text-12-regular {
+    @apply text-[12px] leading-[16px] font-normal;
+  }
+
+  .text-12-semibold {
+    @apply text-[12px] leading-[16px] font-semibold;
+  }
+ @layer base {
+   h5 {
+     @apply text-base font-bold mt-5;
+   }
+ }
+
+
+ button[data-headlessui-focus-guard="true"][aria-hidden="true"] {
+   width: 100% !important;
+   height: 100% !important;
+   z-index: 48;
+   clip: unset !important;
+   background-color: #00000030;
+}
+
+.fc-timegrid-event-harness.fc-timegrid-event-harness-inset {
+   height: 2rem;
+}
+
+  .stat-card {
+    @apply flex flex-1 flex-col gap-6 rounded-2xl bg-cover p-6 shadow-lg;
+  }
+
+    .admin-stat {
+    @apply flex w-full flex-col justify-between gap-5 sm:flex-row xl:gap-10;
+  }
+
+  .header {
+    @apply text-32-bold ;
+  }
+
+  .sub-header {
+    @apply text-18-bold ;
+  }
+
+  .radio ::-webkit-scrollbar {
+    display: none;
+  }

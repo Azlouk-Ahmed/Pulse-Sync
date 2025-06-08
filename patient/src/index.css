@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: #9c88ff;
+  --navbar-width: 256px;
+  --navbar-width-min: 80px;
+  --navbar-dark-primary: white;
+  --navbar-dark-secondary: #2c3e50;
+  --navbar-light-primary: #f5f6fa;
+  --navbar-light-secondary: #8392a5;
+  --bg : #f1f1f1;
+  --light-bg: #ffffff;
+  --text : #555;
+  --primary: #0b7bff;
+  --primary-light: #d8ebff;
+  --green: #00a22b;
+  --green-light: #b8e1c0;
+}
+
+body {
+  background: var(--bg);
+}
+
+p {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.btn {
+  text-align: center;
+  padding: 7px 2rem;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  font-weight: bold;
+  width: fit-content;
+  border-radius: 5px;
+  height: fit-content;
+  font-size: 12px;
+}
+.btn-pr {
+  text-align: center;
+  padding: 7px 2rem;
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  width: fit-content;
+  border-radius: 5px;
+  height: fit-content;
+  font-size: 12px;
+}
+.btn2 {
+  font-weight: bold;
+  text-align: center;
+  padding: 7px 2rem;
+  background-color: var(--green-light);
+  color: var(--green);
+  font-weight: 500;
+  width: fit-content;
+  border-radius: 5px;
+  height: fit-content;
+  font-size: 12px;
+}
+
+.center {
+
+  transition: 0.2s;
+
+}
+
+.center:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
